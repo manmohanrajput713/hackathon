@@ -1,0 +1,7 @@
+.tools/
+runtime/
+target/
+node_modules/
+.next/
+__pycache__/
+.venv/

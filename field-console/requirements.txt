@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy>=1.9
+torch
+matplotlib
+scikit-learn
+pyarrow
+xgboost
+optuna
+openpyxl
+joblib
+

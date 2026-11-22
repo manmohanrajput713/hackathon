@@ -1,0 +1,17 @@
+._*
+.DS_Store
+__pycache__/
+.pytest_cache/
+.mpl-cache/
+.venv/
+.env
+.env.*
+field-console/runtime/
+*.csv
+*.npz
+*.npy
+*.pt
+*.parquet
+*.joblib
+*.ipynb
+**/results/
