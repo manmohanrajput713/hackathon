@@ -1,0 +1,10 @@
+.tools/
+runtime/
+target/
+node_modules/
+.next/
+__pycache__/
+.venv/
+.vercel/
+.env
+.env*.local

@@ -1,0 +1,10 @@
+name,easting,northing,kind
+I1,1200,4800,Injector
+I2,4800,4800,Injector
+I3,3000,3000,Injector
+I4,1200,1200,Injector
+I5,4800,1200,Injector
+P1,3000,4800,Producer
+P2,1800,3000,Producer
+P3,4200,3000,Producer
+P4,3000,1200,Producer
