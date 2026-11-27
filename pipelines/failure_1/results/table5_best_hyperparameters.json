@@ -1,0 +1,135 @@
+{
+  "reference": "Abdalla et al., ACS Omega 2022, 7, 17641-17651, doi:10.1021/acsomega.1c05881",
+  "published_search_space": {
+    "max_depth": {
+      "sampling": "int",
+      "low": 2,
+      "high": 10
+    },
+    "min_child_weight": {
+      "sampling": "log_uniform",
+      "low": 1e-10,
+      "high": 10000000000.0
+    },
+    "colsample_bytree": {
+      "sampling": "uniform",
+      "low": 0.0,
+      "high": 1.0
+    },
+    "learning_rate": {
+      "sampling": "uniform",
+      "low": 0.0,
+      "high": 0.1
+    },
+    "gamma": {
+      "sampling": "int",
+      "low": 0,
+      "high": 5
+    }
+  },
+  "search_space": {
+    "max_depth": {
+      "sampling": "int",
+      "low": 2,
+      "high": 10
+    },
+    "min_child_weight": {
+      "sampling": "log_uniform",
+      "low": 0.01,
+      "high": 20.0
+    },
+    "colsample_bytree": {
+      "sampling": "uniform",
+      "low": 0.5,
+      "high": 1.0
+    },
+    "learning_rate": {
+      "sampling": "uniform",
+      "low": 0.02,
+      "high": 0.1
+    },
+    "gamma": {
+      "sampling": "int",
+      "low": 0,
+      "high": 5
+    }
+  },
+  "best_hyperparameters": {
+    "max_depth": 9,
+    "min_child_weight": 0.045617254582115734,
+    "colsample_bytree": 0.7571172192068059,
+    "learning_rate": 0.0673931655089634,
+    "gamma": 0
+  },
+  "fixed_parameters": {
+    "n_estimators": 200,
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "scale_pos_weight": 48.498257839721255,
+    "n_components": 8,
+    "decision_threshold": 0.0453079454600811,
+    "pre_event_window_days": 7,
+    "test_size": 0.3,
+    "n_splits": 10,
+    "random_state": 42,
+    "feature_columns": [
+      "FRQ",
+      "PDP",
+      "PIP",
+      "PAVG",
+      "MT",
+      "ESPT",
+      "CURRENT",
+      "VOLT",
+      "diff_FRQ",
+      "diff_PDP",
+      "diff_PIP",
+      "diff_PAVG",
+      "diff_MT",
+      "diff_ESPT",
+      "diff_CURRENT",
+      "diff_VOLT"
+    ],
+    "model_columns": [
+      "PC1",
+      "PC2",
+      "PC3",
+      "PC4",
+      "PC5",
+      "PC6",
+      "PC7",
+      "PC8"
+    ]
+  },
+  "optuna": {
+    "n_trials": 20,
+    "direction": "maximize",
+    "objective": "mean ROC-AUC over 10 ESP-grouped folds",
+    "best_value": 0.5208272694807146
+  },
+  "cross_validation": {
+    "fold_auc": [
+      0.6724770083439918,
+      0.7363163152636837,
+      0.6578496832734121,
+      0.4832382310984308,
+      0.46595693779904307,
+      0.27776063629195374,
+      0.23240950226244345,
+      0.6132988298829883,
+      0.6554552912223134,
+      0.41351025936888575
+    ],
+    "mean_auc": 0.5208272694807146,
+    "mean_curve_auc": 0.5208272694807146,
+    "oof_best_f1": 0.04712404712404712
+  },
+  "test": {
+    "roc_auc": 0.5997520737045086,
+    "average_precision": 0.053729610835823574,
+    "positive_precision": 0.05232558139534884,
+    "positive_recall": 0.12162162162162163,
+    "positive_f1": 0.07317073170731707,
+    "support_positive": 148.0
+  }
+}

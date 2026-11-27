@@ -1,0 +1,12 @@
+.git
+.venv
+.tools
+target
+runtime
+web
+**/node_modules
+**/.next
+**/__pycache__
+*.pptx
+*.pdf
+user-guide

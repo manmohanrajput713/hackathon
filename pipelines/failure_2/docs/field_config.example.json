@@ -1,0 +1,36 @@
+{
+  "telemetry_columns": {
+    "well_id": "Well",
+    "timestamp": "SampleTimeUTC",
+    "casing_pressure": "CasingPsig",
+    "tubing_head_pressure": "THP_kPaA",
+    "lift_gas_rate": "InjectionMscfPerDay",
+    "choke_position": "ChokeFraction",
+    "operating_state": "OperatingMode"
+  },
+  "maintenance_columns": {
+    "well_id": "Well",
+    "event_type": "WorkCode",
+    "timestamp": "EffectiveTimeUTC",
+    "event_id": "EpisodeId",
+    "confirmed": "Confirmed",
+    "detected_at": "DetectedUTC",
+    "failed_at": "FailureUTC",
+    "changeout_at": "ChangeoutUTC",
+    "recorded_at": "RecordedUTC"
+  },
+  "event_types": {
+    "glv leak": "valve_leak",
+    "glv malfunction": "valve_malfunction",
+    "glv installed": "installation",
+    "glv replaced": "replacement",
+    "scheduled glv replacement performed": "planned_replacement",
+    "tubing leak": "tubing_leak",
+    "casing heading": "casing_heading",
+    "coverage verified through": "coverage_end"
+  },
+  "casing_pressure": {"unit": "psi", "reference": "gauge", "ambient_kpa": 101.325},
+  "tubing_head_pressure": {"unit": "kpa", "reference": "absolute"},
+  "lift_gas_rate_unit": "mscf/d",
+  "choke_position_unit": "fraction"
+}

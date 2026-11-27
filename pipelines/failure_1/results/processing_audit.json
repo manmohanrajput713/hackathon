@@ -1,0 +1,105 @@
+{
+  "schema": {
+    "daily_rows": 50056,
+    "daily_columns": 38,
+    "well_rows": 166,
+    "solution_rows": 40,
+    "solution_fail30_counts": {
+      "0": 20,
+      "1": 20
+    },
+    "advisories": [
+      "wellData.csv has no Status column. Labels use solution membership instead of a workover sheet.",
+      "wellData.csv has no Failure_Type column. Labels use solution membership instead of a workover sheet.",
+      "wellData.csv has no Failure_Type_Detail column. Labels use solution membership instead of a workover sheet.",
+      "dailyData.csv has no calendar timestamp. Row order within each ESP is the daily time index."
+    ]
+  },
+  "preprocess": {
+    "daily_rows_raw": 50056,
+    "rows_non_esp_removed": 275,
+    "esp_installations": 165,
+    "cohort_esps": {
+      "failed": 125,
+      "survivor": 20,
+      "prospective": 20
+    },
+    "rows_incomplete_sensors_removed": 17508,
+    "rows_zero_or_missing_oil_removed": 68,
+    "rows_unphysical_removed": 0,
+    "iqr_outside_FRQ": 75,
+    "iqr_outside_PDP": 222,
+    "iqr_outside_PIP": 3370,
+    "iqr_outside_PAVG": 1181,
+    "iqr_outside_MT": 600,
+    "iqr_outside_ESPT": 2561,
+    "iqr_outside_CURRENT": 2818,
+    "iqr_outside_VOLT": 274,
+    "rows_iqr_removed": 8512,
+    "rows_cleaned": 23693,
+    "cleaned_esps": 120,
+    "class_counts_cleaned": {
+      "normal": 20695,
+      "excluded_prospective": 2538,
+      "preworkover": 404,
+      "workover": 56
+    }
+  },
+  "fences": {
+    "FRQ": {
+      "lower": 42.5,
+      "upper": 70.5,
+      "k": 1.5
+    },
+    "PDP": {
+      "lower": 1114.6225900000002,
+      "upper": 4448.594373999999,
+      "k": 1.5
+    },
+    "PIP": {
+      "lower": 89.95330700000011,
+      "upper": 1861.6426078,
+      "k": 1.5
+    },
+    "PAVG": {
+      "lower": 788.39862,
+      "upper": 2983.489052,
+      "k": 1.5
+    },
+    "MT": {
+      "lower": 157.235563,
+      "upper": 202.409067,
+      "k": 1.5
+    },
+    "ESPT": {
+      "lower": 151.19266289999996,
+      "upper": 179.2680173,
+      "k": 1.5
+    },
+    "CURRENT": {
+      "lower": 129.25239285,
+      "upper": 396.73897164999994,
+      "k": 1.5
+    },
+    "VOLT": {
+      "lower": 315.27526170000004,
+      "upper": 520.9049777,
+      "k": 1.5
+    }
+  },
+  "train_rows": 14206,
+  "test_rows": 6329,
+  "train_esps": 72,
+  "test_esps": 30,
+  "pca_explained_variance_ratio": [
+    0.3677738440658593,
+    0.1864356357561313,
+    0.14940094201832776,
+    0.09933213974931727,
+    0.07470392447609948,
+    0.06145016316248423,
+    0.022912504936814983,
+    0.0188257390638449
+  ],
+  "pca_cumulative_8": 0.9808348932288791
+}

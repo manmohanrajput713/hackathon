@@ -1,0 +1,77 @@
+well_id,event_at,target_basis,labeled_opportunities,scored_forecasts,first_alert_at,detected,lead_time_hours,data_kind,split,candidate,selected
+SYN-03,2024-04-18 00:00:00+00:00,detection_or_failure,24,24,2024-04-12 06:00:00+00:00,True,138.0,synthetic,validation,paper_baseline/random_forest,False
+SYN-05,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 12:00:00+00:00,True,156.0,synthetic,validation,paper_baseline/random_forest,False
+SYN-07,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,,False,,synthetic,validation,paper_baseline/random_forest,False
+SYN-10,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,,False,,synthetic,validation,paper_baseline/random_forest,False
+SYN-15,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,,False,,synthetic,validation,paper_baseline/random_forest,False
+SYN-17,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,2024-04-17 06:00:00+00:00,True,42.0,synthetic,validation,paper_baseline/random_forest,False
+SYN-20,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 12:00:00+00:00,True,156.0,synthetic,validation,paper_baseline/random_forest,False
+SYN-03,2024-04-18 00:00:00+00:00,detection_or_failure,24,24,2024-04-12 06:00:00+00:00,True,138.0,synthetic,validation,paper_baseline/xgboost,False
+SYN-05,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 12:00:00+00:00,True,156.0,synthetic,validation,paper_baseline/xgboost,False
+SYN-07,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,,False,,synthetic,validation,paper_baseline/xgboost,False
+SYN-10,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,,False,,synthetic,validation,paper_baseline/xgboost,False
+SYN-15,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,,False,,synthetic,validation,paper_baseline/xgboost,False
+SYN-17,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,2024-04-16 00:00:00+00:00,True,72.0,synthetic,validation,paper_baseline/xgboost,False
+SYN-20,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,,False,,synthetic,validation,paper_baseline/xgboost,False
+SYN-03,2024-04-18 00:00:00+00:00,detection_or_failure,24,24,2024-04-12 06:00:00+00:00,True,138.0,synthetic,validation,extended/random_forest,True
+SYN-05,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 00:00:00+00:00,True,168.0,synthetic,validation,extended/random_forest,True
+SYN-07,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,,False,,synthetic,validation,extended/random_forest,True
+SYN-10,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-16 18:00:00+00:00,True,126.0,synthetic,validation,extended/random_forest,True
+SYN-15,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-16 12:00:00+00:00,True,132.0,synthetic,validation,extended/random_forest,True
+SYN-17,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,2024-04-18 12:00:00+00:00,True,12.0,synthetic,validation,extended/random_forest,True
+SYN-20,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-16 12:00:00+00:00,True,132.0,synthetic,validation,extended/random_forest,True
+SYN-03,2024-04-18 00:00:00+00:00,detection_or_failure,24,24,2024-04-12 06:00:00+00:00,True,138.0,synthetic,validation,extended/xgboost,False
+SYN-05,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 00:00:00+00:00,True,168.0,synthetic,validation,extended/xgboost,False
+SYN-07,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,,False,,synthetic,validation,extended/xgboost,False
+SYN-10,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-16 12:00:00+00:00,True,132.0,synthetic,validation,extended/xgboost,False
+SYN-15,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 12:00:00+00:00,True,156.0,synthetic,validation,extended/xgboost,False
+SYN-17,2024-04-19 00:00:00+00:00,detection_or_failure,28,28,2024-04-18 12:00:00+00:00,True,12.0,synthetic,validation,extended/xgboost,False
+SYN-20,2024-05-22 00:00:00+00:00,detection_or_failure,10,10,2024-05-15 12:00:00+00:00,True,156.0,synthetic,validation,extended/xgboost,False
+SYN-01,2024-05-26 00:00:00+00:00,detection_or_failure,81,81,2024-05-24 11:00:00+00:00,True,37.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-03,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 18:00:00+00:00,True,150.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-04,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-21 06:00:00+00:00,True,114.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-06,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,2024-05-24 12:00:00+00:00,True,36.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-11,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-14,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-20 06:00:00+00:00,True,138.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-16,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-19,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-19 18:00:00+00:00,True,150.0,synthetic,chronological_test,paper_baseline/random_forest,False
+SYN-01,2024-05-26 00:00:00+00:00,detection_or_failure,81,81,,False,,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-03,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 18:00:00+00:00,True,150.0,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-04,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-21 06:00:00+00:00,True,114.0,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-06,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,2024-05-24 12:00:00+00:00,True,36.0,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-11,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-14,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-24 18:00:00+00:00,True,30.0,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-16,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-19,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-19 00:00:00+00:00,True,168.0,synthetic,chronological_test,paper_baseline/xgboost,False
+SYN-01,2024-05-26 00:00:00+00:00,detection_or_failure,81,81,,False,,synthetic,chronological_test,extended/random_forest,True
+SYN-03,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 06:00:00+00:00,True,162.0,synthetic,chronological_test,extended/random_forest,True
+SYN-04,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-22 12:00:00+00:00,True,84.0,synthetic,chronological_test,extended/random_forest,True
+SYN-06,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,2024-05-24 12:00:00+00:00,True,36.0,synthetic,chronological_test,extended/random_forest,True
+SYN-11,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,extended/random_forest,True
+SYN-14,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-20 00:00:00+00:00,True,144.0,synthetic,chronological_test,extended/random_forest,True
+SYN-16,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,extended/random_forest,True
+SYN-19,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-21 18:00:00+00:00,True,102.0,synthetic,chronological_test,extended/random_forest,True
+SYN-01,2024-05-26 00:00:00+00:00,detection_or_failure,81,81,,False,,synthetic,chronological_test,extended/xgboost,False
+SYN-03,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 06:00:00+00:00,True,162.0,synthetic,chronological_test,extended/xgboost,False
+SYN-04,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-22 12:00:00+00:00,True,84.0,synthetic,chronological_test,extended/xgboost,False
+SYN-06,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,2024-05-25 00:00:00+00:00,True,24.0,synthetic,chronological_test,extended/xgboost,False
+SYN-11,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,extended/xgboost,False
+SYN-14,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-20 18:00:00+00:00,True,126.0,synthetic,chronological_test,extended/xgboost,False
+SYN-16,2024-05-26 00:00:00+00:00,detection_or_failure,6,6,,False,,synthetic,chronological_test,extended/xgboost,False
+SYN-19,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-21 18:00:00+00:00,True,102.0,synthetic,chronological_test,extended/xgboost,False
+SYN-08,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,paper_baseline/random_forest,False
+SYN-09,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-19 00:00:00+00:00,True,168.0,synthetic,held_well_test,paper_baseline/random_forest,False
+SYN-13,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 06:00:00+00:00,True,162.0,synthetic,held_well_test,paper_baseline/random_forest,False
+SYN-18,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,paper_baseline/random_forest,False
+SYN-08,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,paper_baseline/xgboost,False
+SYN-09,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-19 00:00:00+00:00,True,168.0,synthetic,held_well_test,paper_baseline/xgboost,False
+SYN-13,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,paper_baseline/xgboost,False
+SYN-18,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,paper_baseline/xgboost,False
+SYN-08,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-29 00:00:00+00:00,True,120.0,synthetic,held_well_test,extended/random_forest,True
+SYN-09,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-22 06:00:00+00:00,True,90.0,synthetic,held_well_test,extended/random_forest,True
+SYN-13,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,extended/random_forest,True
+SYN-18,2024-07-04 00:00:00+00:00,changeout,28,28,,False,,synthetic,held_well_test,extended/random_forest,True
+SYN-08,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-28 06:00:00+00:00,True,138.0,synthetic,held_well_test,extended/xgboost,False
+SYN-09,2024-06-26 00:00:00+00:00,detection_or_failure,28,28,2024-06-25 12:00:00+00:00,True,12.0,synthetic,held_well_test,extended/xgboost,False
+SYN-13,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-27 00:00:00+00:00,True,168.0,synthetic,held_well_test,extended/xgboost,False
+SYN-18,2024-07-04 00:00:00+00:00,changeout,28,28,2024-06-28 18:00:00+00:00,True,126.0,synthetic,held_well_test,extended/xgboost,False

@@ -24,14 +24,25 @@ Build with `./Build.ps1` (stop the running console first), then start with `./St
 
 ## Deploy on Vercel
 
-Vercel hosts the Next.js dashboard in `web/`. The Rust API and the Python model workers need a long-running server with SQLite on disk, so they cannot run on Vercel. Host them elsewhere, for example Railway, Render, Fly.io or a VM.
+The root `vercel.json` deploys one Vercel project with two services on one domain:
 
-1. In Vercel, choose **Add New → Project** and import this repository.
-2. Set **Root Directory** to `web`. The framework is detected as Next.js, and `web/vercel.json` sets the install and build commands.
-3. Under **Environment Variables**, set `FIELD_API_URL` to the public URL of the API, for example `https://field-api.example.com`. Every `/api/*` request from the dashboard is proxied there. Without this variable the page loads, but no data is shown.
-4. Deploy.
+| Service | Source | Runtime | Public path |
+| --- | --- | --- | --- |
+| `api` | repo root, `Dockerfile` | Container (Rust API + Python 3.12 model workers) | `/api/*` |
+| `web` | `web/` | Next.js | everything else |
 
-To make the API reachable from Vercel, run it with `FIELD_API_ADDR=0.0.0.0:8787` (or the port your host provides) and `FIELD_PYTHON` set to the interpreter. Generate the `runtime/` files as described below. Vercel ends proxied requests after its own timeout, so long jobs such as building the demo or committing a CRM fit can be cut off on the hosted dashboard.
+The browser calls `/api/...` directly, so the services need no bindings. The model code reads the pipeline sources from `pipelines/` (`pinn`, `gas_pinc`, `failure_1`, `failure_2`, `pywaterflood`). The image builds pywaterflood from that folder and precomputes `crm.json`, `pump.json` and `curves.json`.
+
+To deploy, import the repository in Vercel and leave **Root Directory** at the repository root. No environment variables are required.
+
+Limits to know about:
+
+- **Data resets.** Containers can only write to `/tmp`, which is cleared when an instance stops (after about 5 idle minutes in production). Wells, runs and uploads are lost then, and the demo can be rebuilt from the tree.
+- **Uploads are capped at 4.5 MB** per request, the Vercel limit, instead of the local 64 MB.
+- **Requests stop after 300 s** on Hobby (up to 800 s on Pro). Long CRM fits can hit this.
+- The Container runtime is in Beta.
+
+To test both services locally with Docker running, use `vercel dev`. The API image alone runs with `docker build -t field-api . && docker run -p 8787:80 field-api`.
 
 ## What the replay shows
 
@@ -43,11 +54,11 @@ The API refreshes the replay every ten minutes. Offline fitting uses separate co
 
 ## Set up a fresh workstation
 
-Use Python 3.12, Node.js 22.12+ and a working 64-bit Rust/Cargo toolchain with its native linker. Keep the five source pipeline folders alongside this project. In PowerShell, from the field-console directory:
+Use Python 3.12, Node.js 22.12+ and a working 64-bit Rust/Cargo toolchain with its native linker. The five source pipeline folders are in `pipelines/`; folders placed alongside this project are used when `pipelines/` is absent, and `FIELD_PIPELINES` overrides both. In PowerShell, from the field-console directory:
 
 ```powershell
 python -m venv .venv
-./.venv/Scripts/python.exe -m pip install -r requirements.txt ../pywaterflood
+./.venv/Scripts/python.exe -m pip install -r requirements.txt ./pipelines/pywaterflood
 ./.venv/Scripts/python.exe models/prepare.py
 ./.venv/Scripts/python.exe models/curves.py
 cargo build --locked

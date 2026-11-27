@@ -4,7 +4,8 @@ import os
 import tempfile
 
 APP = Path(__file__).resolve().parents[1]
-ROOT = APP.parent
+# Pipeline sources (pinn, gas_pinc, failure_1, failure_2, pywaterflood): FIELD_PIPELINES, else ./pipelines, else siblings.
+ROOT = Path(os.environ.get("FIELD_PIPELINES") or (APP / "pipelines" if (APP / "pipelines").is_dir() else APP.parent))
 RUN = Path(os.environ.get("FIELD_RUNTIME") or APP / "runtime")
 
 def save(name, data):

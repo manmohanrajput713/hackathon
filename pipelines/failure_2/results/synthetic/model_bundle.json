@@ -1,0 +1,99 @@
+{
+  "bundle_version": 1,
+  "selected_candidate": "extended/random_forest",
+  "data_kind": "synthetic",
+  "feature_schema": [
+    {
+      "name": "casing_kpa",
+      "unit": "kPa absolute"
+    },
+    {
+      "name": "tubing_kpa",
+      "unit": "kPa absolute"
+    },
+    {
+      "name": "casing_minus_tubing_kpa",
+      "unit": "kPa"
+    },
+    {
+      "name": "casing_change_kpa",
+      "unit": "kPa"
+    },
+    {
+      "name": "tubing_change_kpa",
+      "unit": "kPa"
+    },
+    {
+      "name": "casing_mean_kpa",
+      "unit": "kPa absolute"
+    },
+    {
+      "name": "casing_std_kpa",
+      "unit": "kPa"
+    },
+    {
+      "name": "tubing_mean_kpa",
+      "unit": "kPa absolute"
+    },
+    {
+      "name": "tubing_std_kpa",
+      "unit": "kPa"
+    },
+    {
+      "name": "lift_gas_sm3d",
+      "unit": "Sm3/day"
+    },
+    {
+      "name": "choke_pct",
+      "unit": "percent"
+    },
+    {
+      "name": "operating_state",
+      "unit": "category"
+    }
+  ],
+  "alert_threshold": 0.5125606680848466,
+  "settings": {
+    "horizon_days": 7,
+    "max_gap_hours": 36,
+    "rolling_hours": 72,
+    "heading": {
+      "min_period_hours": 2,
+      "max_period_hours": 8,
+      "window_hours": 24,
+      "max_step_minutes": 60,
+      "min_amplitude_kpa": 25
+    }
+  },
+  "input_config": {
+    "telemetry_columns": {},
+    "maintenance_columns": {},
+    "event_types": {},
+    "casing_pressure": {
+      "unit": "kpa",
+      "reference": "gauge",
+      "ambient_kpa": 101.325
+    },
+    "tubing_head_pressure": {
+      "unit": "kpa",
+      "reference": "gauge",
+      "ambient_kpa": 101.325
+    },
+    "lift_gas_rate_unit": "sm3/d",
+    "choke_position_unit": "percent",
+    "nodal_residual_unit": "kpa",
+    "nodal_model_id": null,
+    "assume_log_complete_through_telemetry": false
+  },
+  "library_versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0"
+  },
+  "events_by_target_basis": {
+    "detection_or_failure": 28,
+    "changeout": 4
+  }
+}

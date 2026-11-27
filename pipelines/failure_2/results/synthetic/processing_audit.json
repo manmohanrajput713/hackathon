@@ -1,0 +1,145 @@
+{
+  "data_kind": "synthetic",
+  "inputs": {
+    "telemetry": "dataset/synthetic/telemetry.csv",
+    "maintenance": "dataset/synthetic/maintenance.csv"
+  },
+  "settings": {
+    "horizon_days": 7,
+    "max_gap_hours": 36,
+    "rolling_hours": 72,
+    "heading": {
+      "min_period_hours": 2,
+      "max_period_hours": 8,
+      "window_hours": 24,
+      "max_step_minutes": 60,
+      "min_amplitude_kpa": 25
+    }
+  },
+  "input_config": {
+    "telemetry_columns": {},
+    "maintenance_columns": {},
+    "event_types": {},
+    "casing_pressure": {
+      "unit": "kpa",
+      "reference": "gauge",
+      "ambient_kpa": 101.325
+    },
+    "tubing_head_pressure": {
+      "unit": "kpa",
+      "reference": "gauge",
+      "ambient_kpa": 101.325
+    },
+    "lift_gas_rate_unit": "sm3/d",
+    "choke_position_unit": "percent",
+    "nodal_residual_unit": "kpa",
+    "nodal_model_id": null,
+    "assume_log_complete_through_telemetry": false
+  },
+  "telemetry": {
+    "telemetry_rows": 22837,
+    "telemetry_wells": 20,
+    "telemetry_start": "2024-01-01T00:00:00+00:00",
+    "telemetry_end": "2024-07-04T00:00:00+00:00",
+    "telemetry_columns_present": [
+      "casing_pressure",
+      "choke_position",
+      "lift_gas_rate",
+      "operating_state",
+      "timestamp",
+      "tubing_head_pressure",
+      "well_id"
+    ],
+    "missing_or_invalid_by_normalized_column": {
+      "casing_kpa": 0,
+      "tubing_kpa": 30,
+      "lift_gas_sm3d": 11722,
+      "choke_pct": 633,
+      "operating_state": 0
+    }
+  },
+  "maintenance": {
+    "maintenance_rows": 145,
+    "maintenance_rows_by_type": {
+      "planned_replacement": 48,
+      "tubing_leak": 24,
+      "installation": 20,
+      "coverage_end": 20,
+      "valve_malfunction": 16,
+      "valve_leak": 16,
+      "casing_heading": 1
+    },
+    "qualifying_confirmed_rows": 32,
+    "qualifying_unconfirmed_rows": 0,
+    "confirmed_rows_without_event_time": 0,
+    "confirmed_rows_with_onset_timestamp_after_changeout": 0,
+    "wells_with_undated_confirmed_events": [],
+    "verified_service_resets": 100,
+    "wells_with_explicit_coverage_end": 20
+  },
+  "labeling": {
+    "wells_without_verified_log_coverage": [],
+    "wells_with_telemetry_before_first_known_installation": 0,
+    "timed_event_candidates_without_telemetry_well": 0,
+    "later_timed_events_collapsed_within_service_interval": 0,
+    "timed_event_reports_merged_by_event_id": 0,
+    "events_by_target_basis": {
+      "detection_or_failure": 28,
+      "changeout": 4
+    },
+    "events_before_first_telemetry": 0,
+    "rows_by_label_status": {
+      "negative": 17845,
+      "incomplete_followup": 2732,
+      "positive": 1204,
+      "event_or_post_event": 1056
+    }
+  },
+  "rows_by_feature_status": {
+    "ready": 21625,
+    "known_event_or_post_event": 1056,
+    "first_observation": 91,
+    "missing_pressure": 30,
+    "missing_previous_pressure": 30,
+    "gap": 5
+  },
+  "casing_heading": {
+    "unavailable": 14199,
+    "no_cycles_detected": 7574,
+    "possible_heading": 1064
+  },
+  "split_policy": {
+    "validation_start": "2024-04-11T18:00:00.000000001+00:00",
+    "test_start": "2024-05-24T07:12:00+00:00",
+    "embargo_days": 7.0,
+    "holdout_status": "held_out",
+    "requested_holdout_fraction": 0.3,
+    "holdout_candidate_wells": 20,
+    "holdout_wells": [
+      "SYN-02",
+      "SYN-08",
+      "SYN-09",
+      "SYN-12",
+      "SYN-13",
+      "SYN-18"
+    ],
+    "development_wells": [
+      "SYN-01",
+      "SYN-03",
+      "SYN-04",
+      "SYN-05",
+      "SYN-06",
+      "SYN-07",
+      "SYN-10",
+      "SYN-11",
+      "SYN-14",
+      "SYN-15",
+      "SYN-16",
+      "SYN-17",
+      "SYN-19",
+      "SYN-20"
+    ]
+  },
+  "rows_with_label_unavailable_at_split_cutoff": 0,
+  "training_status": "complete"
+}
